@@ -1,18 +1,8 @@
 ﻿program z12;
-var
-  num, digit, sum, prod: integer;
+var ch, s, proiz: integer;
 begin
-  writeln('Введите четырехзначное число: ');
-  readln(num);
-  sum := 0;
-  prod := 1;
-  while num > 0 do
-  begin
-    digit := num mod 10;
-    sum := sum + digit;
-    prod := prod * digit;
-    num := num div 10;
-  end;
-  writeln('Сумма цифр: ', sum);
-  writeln('Произведение цифр: ', prod);
+  write('Введите четырехзначное число: ');
+  readln(ch);
+  s:= (ch mod 10)+(ch div 10 mod 10) + (ch div 100 mod 10) +ch div 1000;
+  writeln('Сумма цифр = ', s);
 end.
